@@ -15,7 +15,8 @@ public class TestController extends HttpServlet {
   @Override   //DOG然後按ENTER快捷鍵
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	  	var xxx = req.getParameter("xxx");   //如何帶到jsp網頁上顯示出來
-	  	req.setAttribute("nickname", xxx);  //key value
+	  	req.setAttribute("nickname", xxx);   //key value
+	  	
 	  	req.getRequestDispatcher("/index.jsp").forward(req, resp);
 	}
 }
